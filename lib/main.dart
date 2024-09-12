@@ -1,11 +1,12 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/modules/StateFull.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      home: const Home(),
+      home: Home(),
     ),
   );
 }
@@ -31,6 +32,9 @@ class Home extends StatelessWidget {
           children: [
             Text(
               "First column",
+              style: TextStyle(
+                color: Colors.blue.withOpacity(0.3),
+              ),
             ),
             Text(
               "Second column",
