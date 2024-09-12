@@ -23,10 +23,33 @@ class Home extends StatelessWidget {
       ),
       backgroundColor: Colors.green,
       body: Container(
-        margin: EdgeInsets.all(40),
-        padding: EdgeInsets.fromLTRB(20, 30, 20, 40),
-        child: Text("Hello"),
-        color: Colors.grey[400],
+        width: 300,
+        height: 300,
+        color: Colors.pinkAccent[200],
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text(
+              "First column",
+            ),
+            Text(
+              "Second column",
+            ),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    "Row item 1",
+                  ),
+                  Text(
+                    "Row item 2",
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
