@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(
-      home: Home(),
+      home: const Home(),
     ),
   );
 }
@@ -17,18 +17,16 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('I am poor 2'),
+        title: const Text('I am poor'),
         backgroundColor: Colors.blue[900],
         centerTitle: true,
       ),
       backgroundColor: Colors.green,
-      body: Center(
-        child: IconButton(
-            onPressed: () {
-              print("you clicked me");
-            },
-            color: Colors.red,
-            icon: Icon(Icons.mail)),
+      body: Container(
+        margin: EdgeInsets.all(40),
+        padding: EdgeInsets.fromLTRB(20, 30, 20, 40),
+        child: Text("Hello"),
+        color: Colors.grey[400],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
