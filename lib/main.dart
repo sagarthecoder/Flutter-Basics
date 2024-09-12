@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:hello_flutter/modules/StateFull.dart';
 
 void main() {
@@ -23,37 +24,47 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
       backgroundColor: Colors.green,
-      body: Container(
-        width: 300,
-        height: 300,
-        color: Colors.pinkAccent[200],
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text(
-              "First column",
-              style: TextStyle(
-                color: Colors.blue.withOpacity(0.3),
-              ),
-            ),
-            Text(
-              "Second column",
-            ),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text(
-                    "Row item 1",
+      body: SafeArea(
+        child: SingleChildScrollView(
+            padding: EdgeInsets.all(20),
+            child: Column(
+              children: [
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      for (int i = 0; i < 10; i++)
+                        Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.blueGrey,
+                          ),
+                          width: 200,
+                          height: 200,
+                          margin: EdgeInsets.only(right: 20),
+                          child: Center(
+                            child: Text(
+                              'Row $i',
+                            ),
+                          ),
+                        )
+                    ],
                   ),
-                  Text(
-                    "Row item 2",
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
+                ),
+                for (int i = 0; i < 30; i++)
+                  Container(
+                    width: 200,
+                    height: 200,
+                    color: Colors.redAccent,
+                    margin: EdgeInsets.all(20),
+                    child: Center(
+                      child: Text(
+                        'Column $i',
+                      ),
+                    ),
+                  )
+              ],
+            )),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
