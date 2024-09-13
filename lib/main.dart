@@ -2,12 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:hello_flutter/modules/Features/Inspiration/Views/InspirationHomeScreen.dart';
 import 'package:hello_flutter/modules/StateFull.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      home: Home(),
+      home: InspirationHomeScreen(),
     ),
   );
 }
