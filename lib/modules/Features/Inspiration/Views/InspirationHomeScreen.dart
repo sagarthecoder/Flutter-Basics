@@ -38,10 +38,10 @@ class _InspirationHomeScreenState extends State<InspirationHomeScreen> {
           children: [
             Container(
               // padding: EdgeInsets.only(left: 20, top: 10),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Find Your",
                     style: TextStyle(
                       fontSize: 16,
@@ -50,7 +50,7 @@ class _InspirationHomeScreenState extends State<InspirationHomeScreen> {
                   SizedBox(
                     height: 4,
                   ),
-                  Text(
+                  const Text(
                     "Inspiration",
                     style: TextStyle(
                       fontSize: 25,
@@ -69,7 +69,7 @@ class _InspirationHomeScreenState extends State<InspirationHomeScreen> {
                   hintStyle: TextStyle(
                     color: Colors.grey.withOpacity(0.4),
                   ),
-                  border: OutlineInputBorder(
+                  border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(32),
                     ),
@@ -83,7 +83,7 @@ class _InspirationHomeScreenState extends State<InspirationHomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Promo Today',
                     style: TextStyle(color: Colors.black87),
                   ),

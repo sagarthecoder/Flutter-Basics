@@ -2,13 +2,15 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:hello_flutter/modules/Features/Gestures/DraggableBox.dart';
 import 'package:hello_flutter/modules/Features/Inspiration/Views/InspirationHomeScreen.dart';
+import 'package:hello_flutter/modules/Features/OnBoarding/Views/PromoScreen.dart';
 import 'package:hello_flutter/modules/StateFull.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      home: InspirationHomeScreen(),
+      home: DraggableBox(),
     ),
   );
 }
